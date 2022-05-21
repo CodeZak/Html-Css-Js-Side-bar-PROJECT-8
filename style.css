@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: rgb(222, 211, 191);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  height: 100vh;
+  max-width: 400px;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+.header .close_icon a {
+  font-size: 1.9em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.header .close_icon a:hover {
+  color: rgb(35, 136, 102);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.menu a {
+  padding: 15px;
+  font-size: 1.4em;
+  transition: all 0.3s ease-out;
+  color: brown;
+}
+
+.menu a:hover {
+  background-color: bisque;
+}
+
+.menu a span {
+  transition: all 0.3s ease-out;
+}
+
+.menu a:hover span {
+  transform: translate(9px);
+  display: inline-block;
+}
+
+.group1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.social_icons i {
+  font-size: 1.2em;
+  padding: 10px 1px;
+  color: rgb(143, 139, 26);
+  transition: 0.3s;
+}
+
+.social_icons i:hover {
+  font-size: 1.2em;
+  padding: 0px 1px;
+  color: rgb(218, 159, 31);
+}
