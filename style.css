@@ -2,96 +2,156 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
 
 * {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
 }
 
 html {
-  background-color: rgb(222, 211, 191);
+    background-color: rgb(222, 211, 191);
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+/****************** NAV BLOCK ***************/
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 0px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.show_nav {
+    width: 400px;
+}
+
+/********* Header ***************/
+.header {
+    display: flex;
+    width: 100%;
+    padding: 10px 30px;
+    justify-content: space-between;
+}
+
+button  {
+    font-size: 1.9em;
+    height: fit-content;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: bolder;
+    border: none;
+    background: transparent;
+    border-color: transparent;
+  }
+
+button {
+    color: brown;
+
+}
+
+button:hover {
+    color: rgb(204, 96, 14);
+    transform: rotate(360deg);
+}
+
+/********* Nav Links ***************/
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+}
+
+ul li {
+    padding: 15px;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+ul li a {
+    color: rgb(174 125 23);
+}
+ul li:hover a {
+    color: rgb(209, 143, 72);
+}
+
+ul li:hover {
+    background-color: rgb(227 208 180);
+    cursor: pointer;
+    text-indent: 10px;
+}
+
+/********* Footer ***************/
+
+.social_icons {
+    display: flex;
+}
+
+.social_icons a {
+    font-size: 1.2em;
+    padding: 10px 8px;
+    color: rgb(143, 139, 26);
+    transition: 0.4s;
+}
+
+.social_icons a:hover {
+    font-size: 1.2em;
+    transform: translate(0px, -4px);
+    color: rgb(218, 159, 31);
+}
+
+/********************* MORE */
+
+.more {
+    cursor: pointer;
+    height: 50px;
+    margin: 20px;
+    font-size: 2.5em;
+    color: rgb(115, 83, 13);
+    animation-name: example;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.4, 1.4);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .more {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index: 0;
+    }
+    .show_nav {
+        position: relative;
+        width: 600px;
+        z-index: 1;
+    }
 }
 
 nav {
-  height: 100vh;
-  max-width: 400px;
-  background-color: rgb(255, 255, 255);
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px;
-}
-
-.header {
-  display: flex;
-  width: 100%;
-  padding: 10px 30px;
-  justify-content: space-between;
-}
-
-.header .close_icon a {
-  font-size: 1.9em;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.header .close_icon a:hover {
-  color: rgb(35, 136, 102);
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.menu a {
-  padding: 15px;
-  font-size: 1.4em;
-  transition: all 0.3s ease-out;
-  color: brown;
-}
-
-.menu a:hover {
-  background-color: bisque;
-}
-
-.menu a span {
-  transition: all 0.3s ease-out;
-}
-
-.menu a:hover span {
-  transform: translate(9px);
-  display: inline-block;
-}
-
-.group1 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.social_icons i {
-  font-size: 1.2em;
-  padding: 10px 1px;
-  color: rgb(143, 139, 26);
-  transition: 0.3s;
-}
-
-.social_icons i:hover {
-  font-size: 1.2em;
-  padding: 0px 1px;
-  color: rgb(218, 159, 31);
+    z-index: 1;
 }
